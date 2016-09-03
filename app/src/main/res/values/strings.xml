@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">WeatherStar</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!--settings-->
+    <string name="summary_autolocate">Automatically update weather based on your location</string>
+    <string name="title_autolocate">Auto locate</string>
+    <string name="key_autolocate">autolocate</string>
+    <string name="title_morecities">more cities</string>
+
+    <!--city names-->
+    <string name="city_nyc">New York City</string>
+    <string name="city_brooklyn">Brooklyn</string>
+
+    <!--resource name-->
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="city_options">
+        <item>@string/city_nyc</item>
+        <item>@string/city_brooklyn</item>
+    </string-array>
+
+    <string-array name="city_codes">
+        <item>5128581</item>
+        <item>5110302</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:summary="@string/summary_autolocate"
+        android:title="@string/title_autolocate"
+        android:key="@string/key_autolocate"
+        android:icon="@drawable/ic_setting_for_city"/>
+    <MultiSelectListPreference
+            android:title="@string/title_morecities"
+            android:icon="@drawable/ic_more"
+            android:entries="@array/city_options"
+            android:entryValues="@array/city_options"/>
+
+</PreferenceScreen>
