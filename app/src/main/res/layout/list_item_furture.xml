@@ -28,15 +28,6 @@
             android:src="@drawable/ic_setting_for_city" />
     </FrameLayout>
 
-    <TextView
-        android:id="@+id/list_item_forecast_textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:fontFamily="sans-serif-condensed"
-        android:text="clear"
-        android:textAppearance="?android:textAppearanceLarge" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

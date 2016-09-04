@@ -46,7 +46,12 @@ public class ForcastAdapter extends CursorAdapter {
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
         ViewHolder viewHolder = (ViewHolder)view.getTag();
-        
+        if(viewHolder.forestTextView != null)
+            viewHolder.forestTextView.setText("clear");
+        viewHolder.dateTextview.setText("Today, September 03");
+        viewHolder.highTextView.setText("65");
+        viewHolder.lowTextView.setText("32");
+        viewHolder.imageView.setImageResource(R.drawable.ic_more);
     }
 
     @Override
@@ -66,6 +71,7 @@ public class ForcastAdapter extends CursorAdapter {
             imageView =(ImageView) rootView.findViewById(R.id.list_item_forecast_icon);
             highTextView = (TextView) rootView.findViewById(R.id.list_item_high_textview);
             lowTextView = (TextView) rootView.findViewById(R.id.list_item_low_textview);
+            //forestTextView = null for furture list item
             forestTextView = (TextView) rootView.findViewById(R.id.list_item_forecast_textview);
         }
     }
