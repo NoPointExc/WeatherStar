@@ -11,6 +11,7 @@
             android:title="@string/title_morecities"
             android:icon="@drawable/ic_more"
             android:entries="@array/city_options"
-            android:entryValues="@array/city_options"/>
+            android:entryValues="@array/city_options"
+            android:defaultValue="@array/city_default"/>
 
 </PreferenceScreen>

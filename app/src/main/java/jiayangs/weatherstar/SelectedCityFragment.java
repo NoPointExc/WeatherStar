@@ -1,9 +1,7 @@
 package jiayangs.weatherstar;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
-import android.util.AttributeSet;
 import android.util.Log;
 
 /**

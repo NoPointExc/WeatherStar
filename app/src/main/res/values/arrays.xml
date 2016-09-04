@@ -10,4 +10,8 @@
         <item>5110302</item>
     </string-array>
 
+    <string-array name="city_default">
+        <item>5128581</item>
+    </string-array>
+
 </resources>
