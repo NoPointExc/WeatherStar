@@ -3,15 +3,15 @@
 
     <SwitchPreference
         android:defaultValue="true"
-        android:summary="@string/summary_autolocate"
-        android:title="@string/title_autolocate"
+        android:icon="@drawable/ic_setting_for_city"
         android:key="@string/key_autolocate"
-        android:icon="@drawable/ic_setting_for_city"/>
+        android:summary="@string/summary_autolocate"
+        android:title="@string/title_autolocate" />
     <MultiSelectListPreference
-            android:title="@string/title_morecities"
-            android:icon="@drawable/ic_more"
-            android:entries="@array/city_options"
-            android:entryValues="@array/city_options"
-            android:defaultValue="@array/city_default"/>
-
+        android:defaultValue="@array/city_default"
+        android:entries="@array/city_options"
+        android:entryValues="@array/city_codes"
+        android:icon="@drawable/ic_more"
+        android:key="@string/key_selected_cities"
+        android:title="@string/title_morecities" />
 </PreferenceScreen>

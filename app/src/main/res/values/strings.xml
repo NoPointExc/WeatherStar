@@ -6,9 +6,9 @@
     <!--settings-->
     <string name="summary_autolocate">Automatically update weather based on your location</string>
     <string name="title_autolocate">Auto locate</string>
-    <string name="key_autolocate">autolocate</string>
+    <string name="key_autolocate">ATUO_LOCATE</string>
     <string name="title_morecities">more cities</string>
-
+    <string name="key_selected_cities">SELECTED_CITIES</string>
     <!--city names-->
     <string name="city_nyc">New York City</string>
     <string name="city_brooklyn">Brooklyn</string>

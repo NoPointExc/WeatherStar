@@ -3,6 +3,7 @@ package jiayangs.weatherstar;
 import android.content.Context;
 import android.database.Cursor;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import android.widget.TextView;
  * Created by sjyhe on 9/3/2016.
  */
 public class ForcastAdapter extends CursorAdapter {
+    private static final String TAG = CursorAdapter.class.getSimpleName();
 
     private static final int VIEW_TYPE_COUNT = 2;
     private static final int VIEW_TYPE_TODAY = 0;
@@ -25,9 +27,11 @@ public class ForcastAdapter extends CursorAdapter {
 
     @Override
     public View newView(Context context, Cursor cursor, ViewGroup viewGroup) {
-        int itemViewType = getItemViewType(cursor.getPosition());
+        Log.d(TAG, "newView: enter");
+        //int itemViewType = getItemViewType(cursor.getPosition());
+        int itemViewType = VIEW_TYPE_FUTURE_DAY;
         int layoutId = -1;
-        switch (itemViewType){
+        switch (itemViewType) {
             case VIEW_TYPE_TODAY:
                 layoutId = R.layout.list_item_today;
                 break;
@@ -36,7 +40,7 @@ public class ForcastAdapter extends CursorAdapter {
                 break;
         }
 
-        View view = LayoutInflater.from(context).inflate(layoutId,viewGroup,false);
+        View view = LayoutInflater.from(context).inflate(layoutId, viewGroup, false);
         ViewHolder viewHolder = new ViewHolder(view);
         view.setTag(viewHolder);
 
@@ -45,8 +49,9 @@ public class ForcastAdapter extends CursorAdapter {
 
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
-        ViewHolder viewHolder = (ViewHolder)view.getTag();
-        if(viewHolder.forestTextView != null)
+        Log.d(TAG, "bindView: enter");
+        ViewHolder viewHolder = (ViewHolder) view.getTag();
+        if (viewHolder.forestTextView != null)
             viewHolder.forestTextView.setText("clear");
         viewHolder.dateTextview.setText("Today, September 03");
         viewHolder.highTextView.setText("65");
@@ -56,19 +61,24 @@ public class ForcastAdapter extends CursorAdapter {
 
     @Override
     public int getItemViewType(int position) {
-        return (position == 0 ) ? VIEW_TYPE_TODAY : VIEW_TYPE_FUTURE_DAY;
+        return (position == 0) ? VIEW_TYPE_TODAY : VIEW_TYPE_FUTURE_DAY;
     }
 
-    public static class ViewHolder{
+    @Override
+    public int getViewTypeCount() {
+        return VIEW_TYPE_COUNT;
+    }
+
+    public static class ViewHolder {
         public final TextView dateTextview;
         public final ImageView imageView;
         public final TextView highTextView;
         public final TextView lowTextView;
         public final TextView forestTextView;
 
-        public ViewHolder(View rootView){
+        public ViewHolder(View rootView) {
             dateTextview = (TextView) rootView.findViewById(R.id.list_item_date_textview);
-            imageView =(ImageView) rootView.findViewById(R.id.list_item_forecast_icon);
+            imageView = (ImageView) rootView.findViewById(R.id.list_item_forecast_icon);
             highTextView = (TextView) rootView.findViewById(R.id.list_item_high_textview);
             lowTextView = (TextView) rootView.findViewById(R.id.list_item_low_textview);
             //forestTextView = null for furture list item
