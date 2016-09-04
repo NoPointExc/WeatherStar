@@ -23,4 +23,12 @@
     <!-- Date format [CHAR LIMIT=NONE] -->
     <string name="format_full_friendly_date"><xliff:g id="month">%1$s</xliff:g>, <xliff:g id="day">%2$s</xliff:g></string>
     <string name="format_temperature"><xliff:g id="temp">%1.0f</xliff:g>\u00B0</string>
+
+    <!-- SyncAdapter related -->
+    <string name="sync_account_type">jiayangs.weatherstar</string>
+    <string name="content_authority">jiayangs.weatherstar.sync.app</string>
+
+    <string name="pref_location_key" translatable="false">location</string>
+    <string name="pref_location_default" translatable="false">5128581</string>
+    
 </resources>
